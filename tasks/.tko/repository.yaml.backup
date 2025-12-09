@@ -19,7 +19,7 @@ expanded:
 - poo@campanha-principal
 - poo@bloco_f-herança-i
 tasks:
-  poo@estacionamento: '{rate:100}'
+  poo@estacionamento: '{rate:100, human:_amigo, alone:9, study:200}'
 flags:
   quests: 0
   tracks: 0
