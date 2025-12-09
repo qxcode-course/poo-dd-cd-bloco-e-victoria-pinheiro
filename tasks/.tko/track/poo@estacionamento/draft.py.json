@@ -1,0 +1,264 @@
+{
+    "patches": [
+        {
+            "label": "2025-12-04_14-33-29",
+            "content": "@@ -1,748 +0,0 @@\n-class Veiculo:%0A    def __init__(self, id: str, tipo: str):%0A        self.__id: str = id%0A        self._tipo: str = tipo%0A        self._horaEntrada: int = 0%0A%0A    def getId(self) -%3E str:%0A        return self.__id%0A    %0A    def getTipo(self) -%3E str:%0A        return self._tipo%0A    %0A    def setEntrada(self, horaEntrada: int) -%3E None:%0A        self._horaEntrada = horaEntrada%0A%0A    def getEntrada(self) -%3E int:%0A        return self._horaEntrada%0A    %0A    def calcularValor(self, horaSaida: int) -%3E None:%0A        pass #dizendo para o c%C3%B3digo ignora essa parte (abstract)%0A%0A    def __str__(self) -%3E str:%0A        x = 10 - len(self._tipo)%0A            %0A        return f%22%7Bself._tipo%7D : %7Bself.__id%7D : %7Bself._horaEntrada%7D%22%0A%0A%0A%0Aclass Estacionamento:%0A    def __init__(self):%0A\n",
+            "lines": "0"
+        },
+        {
+            "label": "2025-12-04_15-08-02",
+            "content": "@@ -745,71 +745,4 @@\n f):%0A\n-%0Aahsdkjahfjkdahkjd%0A%0Aajkhdkjahdjkah%0A%0A%0Akjashdfjkhfkdja%0Akajhfkjahfjkha\n",
+            "lines": "30"
+        },
+        {
+            "label": "2025-12-04_15-08-36",
+            "content": "@@ -741,8 +741,75 @@\n (self):%0A\n+%0Aahsdkjahfjkdahkjd%0A%0Aajkhdkjahdjkah%0A%0A%0Akjashdfjkhfkdja%0Akajhfkjahfjkha\n",
+            "lines": "38"
+        },
+        {
+            "label": "2025-12-04_15-11-38",
+            "content": "@@ -551,52 +551,8 @@\n act)\n-%0A    # concatena%C3%A7%C3%A3o - ovo banana = ovobanana\n %0A%0A  \n@@ -622,178 +622,8 @@\n     \n-  y = 10 - len(self.__id)%0A        unders = x * %22_%22   #atribui um valor para que, em vez de mutiplicar toda vez que precisar usar, use o %22unders%22%0A        unders2 = y * %22_%22\n     \n@@ -647,17 +647,8 @@\n  f%22%7B\n-unders + \n self\n@@ -662,18 +662,8 @@\n  : %7B\n-unders2 + \n self\n",
+            "lines": "30"
+        },
+        {
+            "label": "2025-12-04_15-21-18",
+            "content": "@@ -926,17 +926,16 @@\n rada%7D%22%0A%0A\n-#\n %0A%0Aclass \n",
+            "lines": "33"
+        },
+        {
+            "label": "2025-12-04_15-22-55",
+            "content": "@@ -931,230 +931,8 @@\n %22%0A%0A#\n- self._tipo.rjust(10, %22_%22) - at%C3%A9 a str chegar na quantidade de caracteres q vc especificou, ele vai add a caractere q vc add para preencher%0A%0Aclass Bike(Veiculo):%0A    def __init__(self, id: str):%0A        super(id, %22bike%22)%0A%0A\n %0A%0Acl\n",
+            "lines": "33"
+        },
+        {
+            "label": "2025-12-04_15-33-46",
+            "content": "@@ -1197,16 +1197,8 @@\n (self):%0A\n-        \n",
+            "lines": "39"
+        },
+        {
+            "label": "2025-12-04_20-06-39",
+            "content": "@@ -1153,110 +1153,8 @@\n %22)%0A%0A\n-    def calcularValor(self, horaSaida: int) -%3E None:%0A        return super().calcularValor(horaSaida)%0A%0A\n %0A%0Acl\n",
+            "lines": "40"
+        },
+        {
+            "label": "2025-12-06_19-51-11",
+            "content": "@@ -1210,16 +1210,55 @@\n         \n+return super().calcularValor(horaSaida)\n %0A%0A%0A%0Aclas\n",
+            "lines": "43"
+        },
+        {
+            "label": "2025-12-06_19-52-22",
+            "content": "@@ -1134,29 +1134,13 @@\n     \n-%0A        super._init_\n+super\n (id,\n",
+            "lines": "43"
+        },
+        {
+            "label": "2025-12-06_20-04-28",
+            "content": "@@ -1114,32 +1114,41 @@\n self, id: str):%0A\n+        %0A\n         super._i\n@@ -1212,35 +1212,17 @@\n int)\n-:%0A        if horaSaida == 0\n+ -%3E None:\n %0A   \n",
+            "lines": "44"
+        },
+        {
+            "label": "2025-12-06_21-14-19",
+            "content": "@@ -1212,42 +1212,26 @@\n     \n-return 3%0A            %0A            \n+ if horaSaida == 0\n %0A   \n",
+            "lines": "44"
+        },
+        {
+            "label": "2025-12-07_13-49-23",
+            "content": "@@ -1133,31 +1133,29 @@\n      super._\n-_\n init_\n-_\n (id, %22bike%22)\n@@ -1221,160 +1221,8 @@\n n 3%0A\n-    %0Aclass Moto(Veiculo):%0A    def __init__(self, id: str):%0A        super.__init__(id, %22moto%22)%0A%0A    def calcularValor(self, horaSaida: int):%0A        %0A %0A%0A\n     \n",
+            "lines": "46"
+        },
+        {
+            "label": "2025-12-07_13-55-20",
+            "content": "@@ -1371,21 +1371,8 @@\n     \n-return %0A    %0A\n %0A %0A%0A\n",
+            "lines": "55"
+        },
+        {
+            "label": "2025-12-07_14-00-26",
+            "content": "@@ -1363,74 +1363,8 @@\n t):%0A\n-        tempo = horaSaida - self._horaEntrada%0A        tempo /= 20%0A\n     \n@@ -1378,474 +1378,100 @@\n urn \n-tempo\n %0A    %0A\n-class Carro(Veiculo):%0A    def __init__(self, id: str):%0A        super.__init__(id, %22carro%22)%0A%0A    def calcularValor(self, horaSaida: int):%0A        tempo = horaSaida - self._horaEntrada%0A        tempo /= 10%0A        if tempo %3C 5:%0A            return 5%0A        else:%0A            return tempo%0A%0Aclass Estacionamento:%0A    def __init__(self):%0A       self.__horaAtual: int = 0%0A       self.__veiculos: list%5BVeiculo%5D = %5B%5D%0A%0A    def proucurarVeiculo(self, id: str) -%3E int\n+%0A %0A%0A            %0A            %0A        %0A%0A%0A%0Aclass Estacionamento:%0A    def __init__(self)\n :%0A  \n",
+            "lines": "57"
+        },
+        {
+            "label": "2025-12-07_14-34-32",
+            "content": "@@ -1920,121 +1920,4 @@\n     \n-for%0A%0A%0A#se for pra repetir uma situa%C3%A7%C3%A3o varias vezes, usa for ou while%0A#para fazer uma escolha usa if else, swith case\n",
+            "lines": "66"
+        },
+        {
+            "label": "2025-12-07_14-41-37",
+            "content": "@@ -659,30 +659,8 @@\n ipo)\n- #len conta os indices\n %0A   \n@@ -1862,23 +1862,8 @@\n = %5B%5D\n- #vetor = lista\n %0A%0A  \n@@ -1923,176 +1923,9 @@\n  for\n- i in range(0, len(self.__veiculos)):  #enquanto o i puder admitir um valor entre 0 e o tamanho da lista                       #in transforma o i em alguem%0A            \n+%0A\n %0A%0A#s\n",
+            "lines": "70"
+        },
+        {
+            "label": "2025-12-07_14-54-27",
+            "content": "@@ -2128,319 +2128,8 @@\n     \n-if self.__veiculos%5Bi%5D.getId() == id:   #pegando o id do veiculo na posi%C3%A7%C3%A3o i e comparando com o id que quer achar%0A                return i%0A        return -1   #-1 %C3%A9 o simbolo geral da computa%C3%A7%C3%A3o indicando que n%C3%A3o achou o que estava proucurando no vetor - ele precisa retornar alguma coisa mesmo n%C3%A3o tendo achado\n %0A%0A#s\n",
+            "lines": "70"
+        },
+        {
+            "label": "2025-12-07_15-13-42",
+            "content": "@@ -174,19 +174,16 @@\n  -%3E str:\n-   \n %0A       \n@@ -321,27 +321,8 @@\n one:\n-  #num lembro mais \n %0A   \n@@ -548,21 +548,16 @@\n stract)%0A\n-    %0A\n     # co\n",
+            "lines": "72"
+        },
+        {
+            "label": "2025-12-07_15-21-07",
+            "content": "@@ -342,40 +342,8 @@\n mais\n---------------------------------\n  %0A  \n@@ -508,74 +508,8 @@\n one:\n-      #quer dizer que nao vai usar ele agora----------------------\n %0A   \n@@ -570,16 +570,20 @@\n stract)%0A\n+    \n %0A    # c\n@@ -1209,45 +1209,8 @@\n ke%22)\n- #esse bike em parenteses esqueci tbm\n %0A%0A  \n",
+            "lines": "73"
+        },
+        {
+            "label": "2025-12-07_16-28-55",
+            "content": "@@ -327,106 +327,56 @@\n :  #\n-faz um set para uma vari%C3%A1vel que %C3%A9 privada e precisa modificar depois (o valor dela vai modificar)\n+num lembro mais-------------------------------- \n %0A   \n",
+            "lines": "73"
+        },
+        {
+            "label": "2025-12-08_19-08-36",
+            "content": "@@ -11,82 +11,8 @@\n ulo:\n-  #classe modelo para as outras classes conseguirem usar ela como atributo\n %0A   \n@@ -595,43 +595,69 @@\n     \n-#vai ser usado pelas classes filhas\n+ #quer dizer que nao vai usar ele agora----------------------\n %0A   \n",
+            "lines": "73"
+        },
+        {
+            "label": "2025-12-08_19-10-33",
+            "content": "@@ -1403,62 +1403,43 @@\n %22) #\n-coloca entre %22%22 pq na classe m%C3%A3e pede o tipo que %C3%A9 str\n+esse bike em parenteses esqueci tbm\n %0A%0A  \n",
+            "lines": "73"
+        },
+        {
+            "label": "2025-12-08_19-15-25",
+            "content": "@@ -2827,195 +2827,4 @@\n case\n-%0A%0Adef main():%0A    estacionamento = Estacionamento() #criando objeto da classe estacionamento%0A%0A    while True:%0A        linha: str = input() #a linha %C3%A9 um str e vai receber um input do terminal\n",
+            "lines": "73"
+        },
+        {
+            "label": "2025-12-08_19-19-09",
+            "content": "@@ -3018,32 +3018,4 @@\n inal\n-%0A        print(%22$%22 + linha) \n",
+            "lines": "79"
+        },
+        {
+            "label": "2025-12-08_19-20-02",
+            "content": "@@ -3045,272 +3045,5 @@\n nha)\n-%0A        args: list%5Bstr%5D = linha.split(%22 %22) #args que %C3%A9 do tipo lista e essa lista vai poder ter uma str dentro. Args %C3%A9 uma lista de str %7C%7C%7C%7C pegar a str e quebrar ela toda, ele l%C3%AA palavra por palavra, ent%C3%A3o %C3%A9 preciso quebrar ela pro c%C3%B3digo entender o comando%0A       \n  \n",
+            "lines": "80"
+        },
+        {
+            "label": "2025-12-08_19-26-34",
+            "content": "@@ -3313,166 +3313,4 @@\n     \n-if args%5B0%5D == %22end%22:%0A            break%0A        elif args%5B0%5D == %22show%22:%0A            print(estacionamento) #printa a vari%C3%A1vel, n%C3%A3o a classe%0A        elif args%5B0%5D == \n",
+            "lines": "82"
+        },
+        {
+            "label": "2025-12-08_19-31-40",
+            "content": "@@ -3475,37 +3475,4 @@\n  == \n-%22tempo%22:%0A            pass%0A%0Amain()\n",
+            "lines": "86"
+        },
+        {
+            "label": "2025-12-08_19-32-53",
+            "content": "@@ -2829,283 +2829,8 @@\n se%0A%0A\n-    def passarTempo(self, tempo: int) -%3E None:%0A        self.__horaAtual += tempo%0A%0A    def estacionar(self, veiculo: Veiculo) -%3E None: #veiculo %C3%A9 objeto pq ele %C3%A9 feito pela forma de bolo Veiculo (classe)%0A        veiculo.setEntrada() #chamando a fun%C3%A7%C3%A3o com um objeto%0A        %0A%0A\n def \n",
+            "lines": "89"
+        },
+        {
+            "label": "2025-12-08_19-55-01",
+            "content": "@@ -3055,32 +3055,16 @@\n Entrada(\n-self.__horaAtual\n ) #chama\n@@ -3094,210 +3094,8 @@\n eto%0A\n-        self.__veiculos.append(veiculo) #para estacionar, precisa colocar o veiculo na lista. Ent%C3%A3o pega a lista, usa o append e coloca o que vai colocar na lista%0A%0A    def pagar(self, id: str) -%3E None:%0A\n     \n",
+            "lines": "96"
+        },
+        {
+            "label": "2025-12-08_20-04-07",
+            "content": "@@ -3318,17 +3318,16 @@\n       %0A%0A\n-%0A\n def main\n",
+            "lines": "99"
+        },
+        {
+            "label": "2025-12-08_20-05-30",
+            "content": "@@ -2183,16 +2183,17 @@\n  def pro\n+u\n curarVei\n@@ -3320,28 +3320,8 @@\n     \n-self.procurarVeiculo\n %0A%0A%0Ad\n",
+            "lines": "100"
+        },
+        {
+            "label": "2025-12-08_20-09-24",
+            "content": "@@ -3318,14 +3318,8 @@\n     \n- pos =\n  sel\n@@ -3339,27 +3339,8 @@\n culo\n-(id) #pos = posi%C3%A7%C3%A3o\n %0A%0A%0Ad\n",
+            "lines": "100"
+        },
+        {
+            "label": "2025-12-08_20-12-22",
+            "content": "@@ -3365,43 +3365,8 @@\n %C3%A7%C3%A3o%0A\n-        if pos != -1:%0A            %0A\n %0A%0Ade\n",
+            "lines": "100"
+        },
+        {
+            "label": "2025-12-08_20-17-39",
+            "content": "@@ -3399,285 +3399,9 @@\n     \n-#pegar = self.__veiculos%5Bpos%5D #pegando o veiculo que ta na posi%C3%A7%C3%A3o pos e colocando ele na variavel pegar%0A            pegar = self.__veiculos.pop(pos) #pop = se n der um indice pra ela, ela vai tirar o primeiro indice do vetor, se der um indice, ela vai tirar o indice que falou\n+%0A\n %0A%0Ade\n",
+            "lines": "102"
+        },
+        {
+            "label": "2025-12-08_20-26-03",
+            "content": "@@ -3512,23 +3512,21 @@\n         \n-veiculo\n+pegar\n  = self.\n@@ -3676,148 +3676,8 @@\n alou\n-%0A            print(f%22%7Bveiculo.getTipo()%7D chegou %7Bveiculo.getEntrada()%7D saiu %7Bself.__horaAtual%7D. Pagar R$%7Bveiculo.calcularValor(horaSaida)%7D%22)\n %0A%0Ade\n",
+            "lines": "102"
+        },
+        {
+            "label": "2025-12-08_20-41-45",
+            "content": "@@ -3814,229 +3814,11 @@\n aida\n- = self.__horaAtual)%7D%22)%0A#quando a fun%C3%A7%C3%A3o esta fora da classe na qual esta escrevendo, pega o objeto, coloca . e o nome da fun%C3%A7%C3%A3o e coloca o ()%0A#quando a fun%C3%A7%C3%A3o esta dentro da classe, usa self e o nome da fun%C3%A7%C3%A3o e coloca (\n+)%7D%22\n )%0A%0Ad\n",
+            "lines": "103"
+        },
+        {
+            "label": "2025-12-08_20-46-51",
+            "content": "@@ -3830,21 +3830,16 @@\n raAtual)\n-:_.2f\n %7D%22)%0A#qua\n@@ -4036,84 +4036,8 @@\n a ()\n-%0A#:_.2f se n%C3%A3o tiver com nenhuma casa depois da virgula, ele completa com 00\n %0A%0Ade\n",
+            "lines": "105"
+        },
+        {
+            "label": "2025-12-08_20-49-22",
+            "content": "@@ -4119,49 +4119,8 @@\n 00%0A%0A\n-    def __str__(self) -%3E str:%0A%0A%0A        %0A\n def \n",
+            "lines": "106"
+        },
+        {
+            "label": "2025-12-08_20-50-45",
+            "content": "@@ -4137,32 +4137,34 @@\n _(self) -%3E str:%0A\n+%0A%0A\n         %0A%0A%0Adef m\n@@ -4156,18 +4156,16 @@\n        %0A\n-%0A%0A\n def main\n",
+            "lines": "110"
+        },
+        {
+            "label": "2025-12-08_20-52-10",
+            "content": "@@ -4157,94 +4157,8 @@\n     \n-return f%22%7B%22%5Cn%22.join(str(x) for x in self.__veiculos)%7D%5CnHora atual: %7Bself.__horaAtual%7D%22\n %0A%0A%0Ad\n",
+            "lines": "110"
+        },
+        {
+            "label": "2025-12-08_20-55-52",
+            "content": "@@ -4917,33 +4917,8 @@\n pass\n-arTempo = int(args%5B1%5D)  #\n %0A%0Ama\n",
+            "lines": "110"
+        },
+        {
+            "label": "2025-12-08_21-02-39",
+            "content": "@@ -4913,427 +4913,37 @@\n     \n-estacionamento.passarTempo(tempo= int(args%5B1%5D))   #tipoQueVoceQuer(variavelQueVoceQuerNesseTipo)%0A        elif args%5B0%5D == %22estacionar%22:%0A            if args%5B1%5D == %22bike%22:%0A                veiculo = Bike(args%5B2%5D)%0A            elif args%5B1%5D == %22moto%22:%0A                veiculo = Moto(args%5B2%5D)%0A            elif args%5B1%5D == %22carro%22:%0A                veiculo = Carro(args%5B2%5D)%0A            estacionamento.estacionar(veiculo)%0A        %0A\n+passarTempo = int(args%5B1%5D)  #\n %0A%0Ama\n",
+            "lines": "110"
+        },
+        {
+            "label": "2025-12-09_08-36-59",
+            "content": "@@ -1429,17 +1429,17 @@\n classe m\n-a\n+%C3%A3\n e pede o\n",
+            "lines": "120"
+        },
+        {
+            "label": "2025-12-09_08-40-04",
+            "content": "@@ -1,5389 +1,302 @@\n-class Veiculo:  #classe modelo para as outras classes conseguirem usar ela como atributo%0A    def __init__(self, id: str, tipo: str):%0A        self.__id: str = id%0A        self._tipo: str = tipo%0A        self._horaEntrada: int = 0%0A%0A    def getId(self) -%3E str:   %0A        return self.__id%0A    %0A    def getTipo(self) -%3E str:%0A        return self._tipo%0A    %0A    def setEntrada(self, horaEntrada: int) -%3E None:  #faz um set para uma vari%C3%A1vel que %C3%A9 privada e precisa modificar depois (o valor dela vai modificar)%0A        self._horaEntrada = horaEntrada%0A%0A    def getEntrada(self) -%3E int:%0A        return self._horaEntrada%0A    %0A    def calcularValor(self, horaSaida: int) -%3E None:     #vai ser usado pelas classes filhas%0A        pass #dizendo para o c%C3%B3digo ignora essa parte (abstract)%0A%0A    # concatena%C3%A7%C3%A3o - ovo banana = ovobanana%0A%0A    def __str__(self) -%3E str:%0A        x = 10 - len(self._tipo) #len conta os indices%0A        y = 10 - len(self.__id)%0A        unders = x * %22_%22   #atribui um valor para que, em vez de mutiplicar toda vez que precisar usar, use o %22unders%22%0A        unders2 = y * %22_%22      %0A        return f%22%7Bunders + self._tipo%7D : %7Bunders2 + self.__id%7D : %7Bself._horaEntrada%7D%22%0A%0A# self._tipo.rjust(10, %22_%22) - at%C3%A9 a str chegar na quantidade de caracteres q vc especificou, ele vai add a caractere q vc add para preencher%0A%0Aclass Bike(Veiculo):%0A    def __init__(self, id: str):%0A        super.__init__(id, %22bike%22) #coloca entre %22%22 pq na classe m%C3%A3e pede o tipo que %C3%A9 str%0A%0A    def calcularValor(self, horaSaida: int):%0A       return 3%0A    %0Aclass Moto(Veiculo):%0A    def __init__(self, id: str):%0A        super.__init__(id, %22moto%22)%0A%0A    def calcularValor(self, horaSaida: int):%0A        tempo = horaSaida - self._horaEntrada%0A        tempo /= 20%0A        return tempo%0A    %0Aclass Carro(Veiculo):%0A    def __init__(self, id: str):%0A        super.__init__(id, %22carro%22)%0A%0A    def calcularValor(self, horaSaida: int):%0A        tempo = horaSaida - self._horaEntrada%0A        tempo /= 10%0A        if tempo %3C 5:%0A            return 5%0A        else:%0A            return tempo%0A%0Aclass Estacionamento:%0A    def __init__(self):%0A       self.__horaAtual: int = 0%0A       self.__veiculos: list%5BVeiculo%5D = %5B%5D #vetor = lista%0A%0A    def procurarVeiculo(self, id: str) -%3E int:%0A        for i in range(0, len(self.__veiculos)):  #enquanto o i puder admitir um valor entre 0 e o tamanho da lista                       #in transforma o i em alguem%0A            if self.__veiculos%5Bi%5D.getId() == id:   #pegando o id do veiculo na posi%C3%A7%C3%A3o i e comparando com o id que quer achar%0A                return i%0A        return -1   #-1 %C3%A9 o simbolo geral da computa%C3%A7%C3%A3o indicando que n%C3%A3o achou o que estava proucurando no vetor - ele precisa retornar alguma coisa mesmo n%C3%A3o tendo achado%0A%0A#se for pra repetir uma situa%C3%A7%C3%A3o varias vezes, usa for ou while%0A#para fazer uma escolha usa if else, swith case%0A%0A    def passarTempo(self, tempo: int) -%3E None:%0A        self.__horaAtual += tempo%0A%0A    def estacionar(self, veiculo: Veiculo) -%3E None: #veiculo %C3%A9 objeto pq ele %C3%A9 feito pela forma de bolo Veiculo (classe)%0A        veiculo.setEntrada(self.__horaAtual) #chamando a fun%C3%A7%C3%A3o com um objeto%0A        self.__veiculos.append(veiculo) #para estacionar, precisa colocar o veiculo na lista. Ent%C3%A3o pega a lista, usa o append e coloca o que vai colocar na lista%0A%0A    def pagar(self, id: str) -%3E None:%0A        pos = self.procurarVeiculo(id) #pos = posi%C3%A7%C3%A3o%0A        if pos != -1:%0A            #pegar = self.__veiculos%5Bpos%5D #pegando o veiculo que ta na posi%C3%A7%C3%A3o pos e colocando ele na variavel pegar%0A            veiculo = self.__veiculos.pop(pos) #pop = se n der um indice pra ela, ela vai tirar o primeiro indice do vetor, se der um indice, ela vai tirar o indice que falou%0A            print(f%22%7Bveiculo.getTipo()%7D chegou %7Bveiculo.getEntrada()%7D saiu %7Bself.__horaAtual%7D. Pagar R$%7Bveiculo.calcularValor(horaSaida = self.__horaAtual):_.2f%7D%22)%0A#quando a fun%C3%A7%C3%A3o esta fora da classe na qual esta escrevendo, pega o objeto, coloca . e o nome da fun%C3%A7%C3%A3o e coloca o ()%0A#quando a fun%C3%A7%C3%A3o esta dentro da classe, usa self e o nome da fun%C3%A7%C3%A3o e coloca ()%0A#:_.2f se n%C3%A3o tiver com nenhuma casa depois da virgula, ele completa com 00%0A%0A    def __str__(self) -%3E str:%0A        return f%22%7B%22%5Cn%22.join(str(x) for x in self.__veiculos)%7D%5CnHora atual: %7Bself.__horaAtual%7D%22%0A%0A%0Adef main():%0A    estacionamento = Estacionamento() #criando objeto da classe estacionamento%0A%0A    while True:%0A        linha: str = input() #a linha %C3%A9 um str e vai receber um input do terminal%0A        print(%22$%22 + linha)%0A        args: list%5Bstr%5D = linha.split(%22 %22) #args que %C3%A9 do tipo lista e essa lista vai poder ter uma str dentro. Args %C3%A9 uma lista de str %7C%7C%7C%7C pegar a str e quebrar ela toda, ele l%C3%AA palavra por palavra, ent%C3%A3o %C3%A9 preciso quebrar ela pro c%C3%B3digo entender o comando%0A        if args%5B0%5D == %22end%22:%0A            break%0A        elif args%5B0%5D == %22show%22:%0A            print(estacionamento) #printa a vari%C3%A1vel, n%C3%A3o a classe%0A        elif args%5B0%5D == %22tempo%22:%0A            estacionamento.passarTempo(tempo= int(args%5B1%5D))   #tipoQueVoceQuer(variavelQueVoceQuerNesseTipo)%0A        elif args%5B0%5D == %22estacionar%22:%0A            if args%5B1%5D == %22bike%22:%0A                veiculo = Bike(args%5B2%5D)%0A                estacionamento.estacionar(veiculo)%0A            elif args%5B1%5D == %22moto%22:%0A                veiculo = Moto(args%5B2%5D)%0A                estacionamento.estacionar(veiculo)%0A            elif args%5B1%5D == %22carro%22:%0A                veiculo = Carro(args%5B2%5D)%0A\n+@@ -1429,17 +1429,17 @@%0A classe m%0A-%25C3%25A3%0A+a%0A e pede o%0A@@ -5082,59 +5082,8 @@%0A e%2522:%250A%0A-                estacionamento.estacionar(veiculo)%250A%0A     %0A@@ -5158,59 +5158,8 @@%0A o%2522:%250A%0A-                estacionamento.estacionar(veiculo)%250A%0A     %0A@@ -5264,36 +5264,32 @@%0A  Carro(args%255B2%255D)%250A%0A-\n     \n+%0A \n     \n@@ -311,42 +311,5 @@\n esta\n-cionamento.estacionar(veiculo)%0A%0Amain()\n+%0A\n",
+            "lines": "17"
+        },
+        {
+            "label": "2025-12-09_08-43-02",
+            "content": "@@ -1368,34 +1368,32 @@\n ):%0A        super\n-()\n .__init__(id, %22b\n@@ -1580,34 +1580,32 @@\n ):%0A        super\n-()\n .__init__(id, %22m\n@@ -1816,18 +1816,16 @@\n    super\n-()\n .__init_\n",
+            "lines": "120"
+        },
+        {
+            "label": "2025-12-09_08-44-17",
+            "content": "@@ -4155,50 +4155,8 @@\n tr:%0A\n-        if len(self.__veiculos) != 0:%0A    \n     \n@@ -4250,75 +4250,8 @@\n l%7D%22%0A\n-        else:%0A            return f%22Hora atual: %7Bself.__horaAtual%7D%22%0A\n %0A%0Ade\n",
+            "lines": "120"
+        },
+        {
+            "label": "2025-12-09_08-55-01",
+            "content": "@@ -1393,17 +1393,17 @@\n __(id, %22\n-B\n+b\n ike%22) #c\n@@ -1607,17 +1607,17 @@\n __(id, %22\n-M\n+m\n oto%22)%0A%0A \n@@ -1837,17 +1837,17 @@\n __(id, %22\n-C\n+c\n arro%22)%0A%0A\n",
+            "lines": "123"
+        },
+        {
+            "label": "2025-12-09_08-55-31",
+            "content": "@@ -5543,76 +5543,8 @@\n ulo)\n-%0A        elif args%5B0%5D == %22pagar%22:%0A            estacionamento.pagar()\n %0A%0Ama\n",
+            "lines": "123"
+        },
+        {
+            "label": "2025-12-09_09-01-50",
+            "content": "@@ -5606,23 +5606,16 @@\n o.pagar(\n-args%5B1%5D\n )%0A%0Amain(\n",
+            "lines": "125"
+        },
+        {
+            "label": "2025-12-09_09-08-01",
+            "content": "@@ -3784,17 +3784,16 @@\n Pagar R$\n- \n %7Bveiculo\n",
+            "lines": "125"
+        },
+        {
+            "label": "2025-12-09_09-08-27",
+            "content": "class Veiculo:  #classe modelo para as outras classes conseguirem usar ela como atributo\n    def __init__(self, id: str, tipo: str):\n        self.__id: str = id\n        self._tipo: str = tipo\n        self._horaEntrada: int = 0\n\n    def getId(self) -> str:   \n        return self.__id\n    \n    def getTipo(self) -> str:\n        return self._tipo\n    \n    def setEntrada(self, horaEntrada: int) -> None:  #faz um set para uma vari\u00e1vel que \u00e9 privada e precisa modificar depois (o valor dela vai modificar)\n        self._horaEntrada = horaEntrada\n\n    def getEntrada(self) -> int:\n        return self._horaEntrada\n    \n    def calcularValor(self, horaSaida: int) -> None:     #vai ser usado pelas classes filhas\n        pass #dizendo para o c\u00f3digo ignora essa parte (abstract)\n\n    # concatena\u00e7\u00e3o - ovo banana = ovobanana\n\n    def __str__(self) -> str:\n        x = 10 - len(self._tipo) #len conta os indices\n        y = 10 - len(self.__id)\n        unders = x * \"_\"   #atribui um valor para que, em vez de mutiplicar toda vez que precisar usar, use o \"unders\"\n        unders2 = y * \"_\"      \n        return f\"{unders + self._tipo} : {unders2 + self.__id} : {self._horaEntrada}\"\n\n# self._tipo.rjust(10, \"_\") - at\u00e9 a str chegar na quantidade de caracteres q vc especificou, ele vai add a caractere q vc add para preencher\n\nclass Bike(Veiculo):\n    def __init__(self, id: str):\n        super().__init__(id, \"Bike\") #coloca entre \"\" pq na classe m\u00e3e pede o tipo que \u00e9 str\n\n    def calcularValor(self, horaSaida: int):\n       return 3\n    \nclass Moto(Veiculo):\n    def __init__(self, id: str):\n        super().__init__(id, \"Moto\")\n\n    def calcularValor(self, horaSaida: int):\n        tempo = horaSaida - self._horaEntrada\n        tempo /= 20\n        return tempo\n    \nclass Carro(Veiculo):\n    def __init__(self, id: str):\n        super().__init__(id, \"Carro\")\n\n    def calcularValor(self, horaSaida: int):\n        tempo = horaSaida - self._horaEntrada\n        tempo /= 10\n        if tempo < 5:\n            return 5\n        else:\n            return tempo\n\nclass Estacionamento:\n    def __init__(self):\n       self.__horaAtual: int = 0\n       self.__veiculos: list[Veiculo] = [] #vetor = lista\n\n    def procurarVeiculo(self, id: str) -> int:\n        for i in range(0, len(self.__veiculos)):  #enquanto o i puder admitir um valor entre 0 e o tamanho da lista                       #in transforma o i em alguem\n            if self.__veiculos[i].getId() == id:   #pegando o id do veiculo na posi\u00e7\u00e3o i e comparando com o id que quer achar\n                return i\n        return -1   #-1 \u00e9 o simbolo geral da computa\u00e7\u00e3o indicando que n\u00e3o achou o que estava proucurando no vetor - ele precisa retornar alguma coisa mesmo n\u00e3o tendo achado\n\n#se for pra repetir uma situa\u00e7\u00e3o varias vezes, usa for ou while\n#para fazer uma escolha usa if else, swith case\n\n    def passarTempo(self, tempo: int) -> None:\n        self.__horaAtual += tempo\n\n    def estacionar(self, veiculo: Veiculo) -> None: #veiculo \u00e9 objeto pq ele \u00e9 feito pela forma de bolo Veiculo (classe)\n        veiculo.setEntrada(self.__horaAtual) #chamando a fun\u00e7\u00e3o com um objeto\n        self.__veiculos.append(veiculo) #para estacionar, precisa colocar o veiculo na lista. Ent\u00e3o pega a lista, usa o append e coloca o que vai colocar na lista\n\n    def pagar(self, id: str) -> None:\n        pos = self.procurarVeiculo(id) #pos = posi\u00e7\u00e3o\n        if pos != -1:\n            #pegar = self.__veiculos[pos] #pegando o veiculo que ta na posi\u00e7\u00e3o pos e colocando ele na variavel pegar\n            veiculo = self.__veiculos.pop(pos) #pop = se n der um indice pra ela, ela vai tirar o primeiro indice do vetor, se der um indice, ela vai tirar o indice que falou\n            print(f\"{veiculo.getTipo()} chegou {veiculo.getEntrada()} saiu {self.__horaAtual}. Pagar R$ {veiculo.calcularValor(horaSaida = self.__horaAtual):_.2f}\")\n#quando a fun\u00e7\u00e3o esta fora da classe na qual esta escrevendo, pega o objeto, coloca . e o nome da fun\u00e7\u00e3o e coloca o ()\n#quando a fun\u00e7\u00e3o esta dentro da classe, usa self e o nome da fun\u00e7\u00e3o e coloca ()\n#:_.2f se n\u00e3o tiver com nenhuma casa depois da virgula, ele completa com 00\n\n    def __str__(self) -> str:\n        if len(self.__veiculos) != 0:\n            return f\"{\"\\n\".join(str(x) for x in self.__veiculos)}\\nHora atual: {self.__horaAtual}\"\n        else:\n            return f\"Hora atual: {self.__horaAtual}\"\n\n\ndef main():\n    estacionamento = Estacionamento() #criando objeto da classe estacionamento\n\n    while True:\n        linha: str = input() #a linha \u00e9 um str e vai receber um input do terminal\n        print(\"$\" + linha)\n        args: list[str] = linha.split(\" \") #args que \u00e9 do tipo lista e essa lista vai poder ter uma str dentro. Args \u00e9 uma lista de str |||| pegar a str e quebrar ela toda, ele l\u00ea palavra por palavra, ent\u00e3o \u00e9 preciso quebrar ela pro c\u00f3digo entender o comando\n        if args[0] == \"end\":\n            break\n        elif args[0] == \"show\":\n            print(estacionamento) #printa a vari\u00e1vel, n\u00e3o a classe\n        elif args[0] == \"tempo\":\n            estacionamento.passarTempo(tempo= int(args[1]))   #tipoQueVoceQuer(variavelQueVoceQuerNesseTipo)\n        elif args[0] == \"estacionar\":\n            if args[1] == \"bike\":\n                veiculo = Bike(args[2])\n                estacionamento.estacionar(veiculo)\n            elif args[1] == \"moto\":\n                veiculo = Moto(args[2])\n                estacionamento.estacionar(veiculo)\n            elif args[1] == \"carro\":\n                veiculo = Carro(args[2])\n                estacionamento.estacionar(veiculo)\n        elif args[0] == \"pagar\":\n            estacionamento.pagar(args[1])\n\nmain()",
+            "lines": "125"
+        }
+    ]
+}
