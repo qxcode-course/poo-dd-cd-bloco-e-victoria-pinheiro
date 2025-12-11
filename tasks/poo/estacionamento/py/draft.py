@@ -4,7 +4,7 @@ class Veiculo:  #classe modelo para as outras classes conseguirem usar ela como 
         self._tipo: str = tipo
         self._horaEntrada: int = 0
 
-    def getId(self) -> str:   
+    def getId(self) -> str:   #get = pegar
         return self.__id
     
     def getTipo(self) -> str:
