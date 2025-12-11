@@ -2,8 +2,73 @@
     "patches": [
         {
             "label": "2025-12-04_14-27-31",
-            "content": "",
+            "content": "@@ -1,49 +0,0 @@\n-class Animal:%0A    def __init__(self, nome: str):%0A\n",
             "lines": "0"
+        },
+        {
+            "label": "2025-12-10_21-40-34",
+            "content": "@@ -46,35 +46,4 @@\n r):%0A\n-        self.__nome: str = nome\n",
+            "lines": "2"
+        },
+        {
+            "label": "2025-12-10_21-46-23",
+            "content": "@@ -77,66 +77,4 @@\n nome\n-%0A%0A%0Adef main():%0A    animal = Animal()%0A%0A    while True:%0A        \n",
+            "lines": "3"
+        },
+        {
+            "label": "2025-12-10_21-49-27",
+            "content": "@@ -139,169 +139,4 @@\n     \n-linha: str = input()%0A        print(%22$%22 + linha)%0A        args: list%5Bstr%5D = linha.split(%22 %22)%0A%0A        if args%5B0%5D == %22end%22:%0A            break%0A        elif args%5B0%5D == %22%22\n",
+            "lines": "10"
+        },
+        {
+            "label": "2025-12-10_21-58-13",
+            "content": "@@ -303,48 +303,5 @@\n == %22\n-show%22:%0A            print(animal)%0A    %0Amain()\n+%22\n",
+            "lines": "16"
+        },
+        {
+            "label": "2025-12-10_22-03-51",
+            "content": "@@ -79,57 +79,8 @@\n me%0A%0A\n-    def apresentarNome(self, nome: str) -%3E str:%0A%0A\n %0Adef\n",
+            "lines": "19"
+        },
+        {
+            "label": "2025-12-10_22-45-14",
+            "content": "@@ -127,53 +127,8 @@\n tr:%0A\n-        return f%22Eu sou um(a) %7Bself.__nome%7D%22%0A\n %0A%0Ade\n",
+            "lines": "21"
+        },
+        {
+            "label": "2025-12-10_22-46-02",
+            "content": "@@ -102,16 +102,27 @@\n ome(self\n+, nome: str\n ) -%3E str\n@@ -170,179 +170,9 @@\n ome%7D\n-!%22%0A    %0A    def fazerSom(self):%0A        pass%0A%0A    def mover(self):%0A        pass%0A%0Aclass Leao(Animal):%0A    def __init__(self, nome: str):%0A        super().__init__(nome)%0A    \n+%22\n %0A%0A%0Ad\n",
+            "lines": "22"
+        },
+        {
+            "label": "2025-12-10_22-52-55",
+            "content": "@@ -325,60 +325,8 @@\n ome)\n-%0A%0A    def fazerSom(self):%0A        return f%22Ruaaawww%22\n %0A   \n",
+            "lines": "33"
+        },
+        {
+            "label": "2025-12-10_22-54-13",
+            "content": "@@ -383,263 +383,8 @@\n    %0A\n-class Elefante(Animal):%0A    def __init__(self, nome: str):%0A        super().__init__(nome)%0A%0A    def fazerSom(self):%0A        return f%22fummmm uuhhhh%22%0A%0Aclass Cobra(Animal):%0A    def __init__(self, nome: str):%0A        return f%22pssiiiiiiiiiiihhhhrhrhrhhr%22%0A%0A    %0A\n %0A%0Ade\n",
+            "lines": "36"
+        },
+        {
+            "label": "2025-12-10_22-57-59",
+            "content": "@@ -637,36 +637,8 @@\n     \n-def fazerSom(self):%0A        \n %0A%0A%0Ad\n",
+            "lines": "48"
+        },
+        {
+            "label": "2025-12-10_22-59-42",
+            "content": "@@ -383,61 +383,8 @@\n    %0A\n-    def mover(self):%0A        return f%22azunhada%22%0A    %0A\n clas\n@@ -529,63 +529,8 @@\n hhh%22\n-%0A    %0A    def mover(self):%0A        return f%22jogar %C3%A1gua%22\n %0A%0Acl\n@@ -587,64 +587,8 @@\n r):%0A\n-        super().__init__(nome)%0A%0A    def fazerSom(self):%0A\n     \n@@ -629,16 +629,51 @@\n hrhhr%22%0A%0A\n+    def fazerSom(self):%0A        %0A%0A%0A\n def main\n",
+            "lines": "49"
+        },
+        {
+            "label": "2025-12-10_23-02-35",
+            "content": "@@ -795,69 +795,8 @@\n hhr%22\n-%0A    %0A    def mover(self):%0A        return f%22picada%22%0A    %0A    \n %0A%0Ade\n",
+            "lines": "54"
+        },
+        {
+            "label": "2025-12-10_23-03-51",
+            "content": "class Animal:\n    def __init__(self, nome: str):\n        self.__nome: str = nome\n\n    def apresentarNome(self) -> str:\n        return f\"Eu sou um(a) {self.__nome}!\"\n    \n    def fazerSom(self):\n        pass\n\n    def mover(self):\n        pass\n\nclass Leao(Animal):\n    def __init__(self, nome: str):\n        super().__init__(nome)\n\n    def fazerSom(self):\n        return f\"Ruaaawww\"\n    \n    def mover(self):\n        return f\"azunhada\"\n    \nclass Elefante(Animal):\n    def __init__(self, nome: str):\n        super().__init__(nome)\n\n    def fazerSom(self):\n        return f\"fummmm uuhhhh\"\n    \n    def mover(self):\n        return f\"jogar \u00e1gua\"\n\nclass Cobra(Animal):\n    def __init__(self, nome: str):\n        super().__init__(nome)\n\n    def fazerSom(self):\n        return f\"pssiiiiiiiiiiihhhhrhrhrhhr\"\n    \n    def mover(self):\n        return f\"picada\"\n    \n    \n\ndef main():\n    animal = Animal()\n\n    while True:\n        linha: str = input()\n        print(\"$\" + linha)\n        args: list[str] = linha.split(\" \")\n\n        if args[0] == \"end\":\n            break\n        elif args[0] == \"show\":\n            print(animal)\n    \nmain()",
+            "lines": "59"
         }
     ]
 }
