@@ -7,8 +7,73 @@
         },
         {
             "label": "2025-12-04_14-25-31",
-            "content": "from abc import ABC, abstractmethod\n\nclass Pagamento(ABC):\n    def __init__(self, valor: float, descricao: str):\n        self.valor: float = valor\n        self.descricao = descricao\n    \n    def resumo(self) -> str:\n        return f\"Pagamento de R$ {self.valor}: {self.descricao}\"\n    \n    def validar_valor(self) -> None:\n        if self.valor <= 0:\n            raise ValueError(\"falhou: valor invalido\")\n    \n    @abstractmethod\n    def processar(self):\n        pass\n    \nclass CartaoCredito(Pagamento): #acoplamento forte\n    def __init__(self, num: int, nome: str, limite: float, valor: float, descricao: str):\n        super().__init__(valor, descricao)\n        self.num = num\n        self.nome = nome\n        self.limite: float = limite\n\n    def resumo(self):\n        return \"Cartao de Credito: \" + super().resumo()\n\n    def get_limite(self):\n        return self.limite\n\n    def processar(self):\n        if self.valor > self.limite:\n            print(\"pagamento recusado por limite insuficiente\")\n            return\n        self.limite -= self.valor\n\n\ndef processar_pagamentos(pagamentos: list[Pagamento]):\n    for pag in pagamentos:\n        pag.validar_valor()\n        print(pag.resumo())\n        pag.processar()\n        if isinstance(pag, CartaoCredito):\n            print(pag.get_limite())\n\npag: Pagamento = CartaoCredito(nome= \"David\", descricao=\"Coxinha\", limite=500.00, num=123, valor=0.50)\npagamentos: list[Pagamento] = [pag]\nprocessar_pagamentos(pagamentos)",
+            "content": "@@ -30,8 +30,1441 @@\n method%0A%0A\n+class Pagamento(ABC):%0A    def __init__(self, valor: float, descricao: str):%0A        self.valor: float = valor%0A        self.descricao = descricao%0A    %0A    def resumo(self) -%3E str:%0A        return f%22Pagamento de R$ %7Bself.valor%7D: %7Bself.descricao%7D%22%0A    %0A    def validar_valor(self) -%3E None:%0A        if self.valor %3C= 0:%0A            raise ValueError(%22falhou: valor invalido%22)%0A    %0A    @abstractmethod%0A    def processar(self):%0A        pass%0A    %0Aclass CartaoCredito(Pagamento): #acoplamento forte%0A    def __init__(self, num: int, nome: str, limite: float, valor: float, descricao: str):%0A        super().__init__(valor, descricao)%0A        self.num = num%0A        self.nome = nome%0A        self.limite: float = limite%0A%0A    def resumo(self):%0A        return %22Cartao de Credito: %22 + super().resumo()%0A%0A    def get_limite(self):%0A        return self.limite%0A%0A    def processar(self):%0A        if self.valor %3E self.limite:%0A            print(%22pagamento recusado por limite insuficiente%22)%0A            return%0A        self.limite -= self.valor%0A%0A%0Adef processar_pagamentos(pagamentos: list%5BPagamento%5D):%0A    for pag in pagamentos:%0A        pag.validar_valor()%0A        print(pag.resumo())%0A        pag.processar()%0A        if isinstance(pag, CartaoCredito):%0A            print(pag.get_limite())%0A%0Apag: Pagamento = CartaoCredito(nome= %22David%22, descricao=%22Coxinha%22, limite=500.00, num=123, valor=0.50)%0Apagamentos: list%5BPagamento%5D = %5Bpag%5D%0Aprocessar_pagamentos(pagamentos)\n",
             "lines": "49"
+        },
+        {
+            "label": "2025-12-13_10-43-04",
+            "content": "@@ -34,193 +34,4 @@\n od%0A%0A\n-class Pagamento(ABC):%0A    def __init__(self, valor: float, descricao: str):%0A        self._valor: float = valor #float %C3%A9 numero com virgula%0A        self._descricao: str = descricao%0A%0A        \n",
+            "lines": "2"
+        },
+        {
+            "label": "2025-12-13_10-48-05",
+            "content": "@@ -219,88 +219,8 @@\n     \n-def resumo(self):%0A        print(f%22Pagamento de R$ %7Bself._valor%7D: %7Bself._descricao%7D%22)\n+    \n",
+            "lines": "8"
+        },
+        {
+            "label": "2025-12-13_10-49-40",
+            "content": "@@ -303,106 +303,4 @@\n o%7D%22)\n-%0A%0A    def validarValor(self):%0A        if self._valor %3C= 0:%0A            raise #lan%C3%A7a uma exce%C3%A7%C3%A3o.%0A%0A    \n",
+            "lines": "9"
+        },
+        {
+            "label": "2025-12-13_10-53-18",
+            "content": "@@ -379,43 +379,8 @@\n aise\n- ValueError(%22fail: valor inv%C3%A1lido%22)\n  #la\n",
+            "lines": "15"
+        },
+        {
+            "label": "2025-12-13_10-54-11",
+            "content": "@@ -434,194 +434,9 @@\n %C3%A7%C3%A3o.\n- -%3E lan%C3%A7a exce%C3%A7%C3%A3o para economizar retorno. Quando fala que algo ta errado, usa ela para evitar que o codigo pare para dizer que retornou errado, no caso, em vez disso, ele %0A        else:\n+%0A\n %0A   \n",
+            "lines": "15"
+        },
+        {
+            "label": "2025-12-13_10-57-05",
+            "content": "@@ -606,105 +606,23 @@\n ele \n-para o codigo e diz que esta errado%0A%0A    @abstractmethod%0A    def processar(self):%0A        pass%0A%0Aclass\n+%0A        else:%0A    \n",
+            "lines": "15"
+        },
+        {
+            "label": "2025-12-13_10-59-25",
+            "content": "@@ -707,212 +707,4 @@\n lass\n- CartaoCredito:%0A    def __init__(self, valor: float, descricao: str):%0A        super().__init__(valor, %22Cr%C3%A9dito%22)%0A        self.__numero: int%0A        self.__nomeTitular: str%0A        self.__limiteDisponivel: int\n",
+            "lines": "19"
+        },
+        {
+            "label": "2025-12-13_11-03-52",
+            "content": "@@ -915,126 +915,4 @@\n  int\n-%0A%0A    def processar(self):%0A        if self._valor %3E self.__limiteDisponivel:%0A            %0A        else:%0A            self._\n",
+            "lines": "24"
+        },
+        {
+            "label": "2025-12-13_11-06-29",
+            "content": "@@ -1004,24 +1004,8 @@\n     \n-return %22recusar%22\n %0A   \n@@ -1037,76 +1037,4 @@\n lf._\n-valor - self.__limiteDisponivel%0A            return %22confirmar pagamento%22\n",
+            "lines": "30"
+        },
+        {
+            "label": "2025-12-13_11-08-12",
+            "content": "@@ -805,25 +805,25 @@\n (valor, \n-descricao\n+%22Cr%C3%A9dito%22\n )%0A      \n@@ -1020,34 +1020,8 @@\n sar%22\n-                #perguntar\n %0A   \n@@ -1081,16 +1081,16 @@\n ponivel%0A\n+\n         \n@@ -1125,121 +1125,4 @@\n nto%22\n-%0A        %0Aclass Pix:%0A    def __init__(self, valor: float, descricao: str):%0A        super().__init__(valor, descricao)\n",
+            "lines": "31"
+        },
+        {
+            "label": "2025-12-13_11-13-01",
+            "content": "@@ -774,62 +774,8 @@\n  str\n-, numero: str, nomeTitular: str, limiteDisponivel: int\n ):%0A \n@@ -843,20 +843,11 @@\n ro: \n-str = numero\n+int\n %0A   \n@@ -878,22 +878,8 @@\n  str\n- = nomeTitular\n %0A   \n@@ -915,27 +915,8 @@\n  int\n- = limiteDisponivel\n %0A%0A  \n@@ -1004,35 +1004,24 @@\n     \n-print(%22pagamento \n+return %22\n recusa\n-do%22)\n+r%22\n     \n@@ -1032,16 +1032,26 @@\n         \n+#perguntar\n %0A       \n@@ -1064,24 +1064,38 @@\n %0A           \n+ self._valor -\n  self.__limi\n@@ -1110,66 +1110,49 @@\n ivel\n- -= self._valor%0A            print(%22pagamento confirmado%22) \n+%0A            return %22confirmar pagamento%22\n %0A   \n@@ -1223,27 +1223,8 @@\n  str\n-, chave: str, banco\n ):%0A \n@@ -1268,38 +1268,4 @@\n cao)\n-%0A        self.__chave: str = chave\n",
+            "lines": "35"
+        },
+        {
+            "label": "2025-12-13_11-19-54",
+            "content": "@@ -1338,21 +1338,16 @@\n r, banco\n-: str\n ):%0A     \n@@ -1421,147 +1421,4 @@\n have\n-%0A        self.__banco: str = banco%0A%0A    def processar(self):%0A        self.validarValor() %0A        print(f%22%7Bself.__banco%7D %7Bself.__chave%7D%22)%0A%0A    \n",
+            "lines": "36"
+        },
+        {
+            "label": "2025-12-13_11-27-23",
+            "content": "from abc import ABC, abstractmethod\n\nclass Pagamento(ABC):\n    def __init__(self, valor: float, descricao: str):\n        self._valor: float = valor #float \u00e9 numero com virgula\n        self._descricao: str = descricao\n\n    def resumo(self):\n        print(f\"Pagamento de R$ {self._valor}: {self._descricao}\")\n\n    def validarValor(self):\n        if self._valor <= 0:\n            raise ValueError(\"fail: valor inv\u00e1lido\") #lan\u00e7a uma exce\u00e7\u00e3o. -> lan\u00e7a exce\u00e7\u00e3o para economizar retorno. Quando fala que algo ta errado, usa ela para evitar que o codigo pare para dizer que retornou errado, no caso, em vez disso, ele para o codigo e diz que esta errado\n\n    @abstractmethod\n    def processar(self):\n        pass\n\nclass CartaoCredito:\n    def __init__(self, valor: float, descricao: str, numero: str, nomeTitular: str, limiteDisponivel: int):\n        super().__init__(valor, descricao)\n        self.__numero: str = numero\n        self.__nomeTitular: str = nomeTitular\n        self.__limiteDisponivel: int = limiteDisponivel\n\n    def processar(self):\n        if self._valor > self.__limiteDisponivel:\n            print(\"pagamento recusado\")                \n        else:\n            self.__limiteDisponivel -= self._valor\n            print(\"pagamento confirmado\") \n        \nclass Pix:\n    def __init__(self, valor: float, descricao: str, chave: str, banco: str):\n        super().__init__(valor, descricao)\n        self.__chave: str = chave\n        self.__banco: str = banco\n\n    def processar(self):\n        self.validarValor() \n        print(f\"{self.__banco} {self.__chave}\")\n\n    ",
+            "lines": "43"
         }
     ]
 }
