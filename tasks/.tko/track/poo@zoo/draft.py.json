@@ -67,8 +67,78 @@
         },
         {
             "label": "2025-12-10_23-03-51",
-            "content": "class Animal:\n    def __init__(self, nome: str):\n        self.__nome: str = nome\n\n    def apresentarNome(self) -> str:\n        return f\"Eu sou um(a) {self.__nome}!\"\n    \n    def fazerSom(self):\n        pass\n\n    def mover(self):\n        pass\n\nclass Leao(Animal):\n    def __init__(self, nome: str):\n        super().__init__(nome)\n\n    def fazerSom(self):\n        return f\"Ruaaawww\"\n    \n    def mover(self):\n        return f\"azunhada\"\n    \nclass Elefante(Animal):\n    def __init__(self, nome: str):\n        super().__init__(nome)\n\n    def fazerSom(self):\n        return f\"fummmm uuhhhh\"\n    \n    def mover(self):\n        return f\"jogar \u00e1gua\"\n\nclass Cobra(Animal):\n    def __init__(self, nome: str):\n        super().__init__(nome)\n\n    def fazerSom(self):\n        return f\"pssiiiiiiiiiiihhhhrhrhrhhr\"\n    \n    def mover(self):\n        return f\"picada\"\n    \n    \n\ndef main():\n    animal = Animal()\n\n    while True:\n        linha: str = input()\n        print(\"$\" + linha)\n        args: list[str] = linha.split(\" \")\n\n        if args[0] == \"end\":\n            break\n        elif args[0] == \"show\":\n            print(animal)\n    \nmain()",
+            "content": "@@ -852,138 +852,8 @@\n    %0A\n-    popopopopo%0A    alaoakaoakoa%0A    oakoaoaokaokao%0A    oaijaijaikjaijai%0A    aijaijaijaiajia%0A    ikajiajikajiajiajiajikaiajia%0A    %0A\n     \n",
             "lines": "59"
+        },
+        {
+            "label": "2025-12-12_19-55-54",
+            "content": "@@ -844,24 +844,154 @@\n icada%22%0A    %0A\n+    popopopopo%0A    alaoakaoakoa%0A    oakoaoaokaokao%0A    oaijaijaikjaijai%0A    aijaijaijaiajia%0A    ikajiajikajiajiajiajikaiajia%0A    %0A\n     %0A%0Adef ma\n",
+            "lines": "66"
+        },
+        {
+            "label": "2025-12-12_20-16-10",
+            "content": "@@ -856,171 +856,8 @@\n     \n-class iwjjwiwjd;:%0Awmdimdwkmdwkwmdkm%0Awkokwwmdk       ekwodkwod%0A        siwjdwmdwjndkwd%0A    wijdiwxmiwdmkwdm%0Aifwwokodwkdwo else%0Awkdwdmkwdmkw%0Awdokowdkowdkowkdowkdowd%0A\n %0A%0Ade\n",
+            "lines": "59"
+        },
+        {
+            "label": "2025-12-12_20-17-26",
+            "content": "@@ -1019,64 +1019,8 @@\n owd%0A\n-dwkokdwodkwmdkmd%0Awododmwdmkwdm%0Awdmwkdmkwdmwd%0Awmdowdowdm%0A\n %0A%0Ade\n",
+            "lines": "67"
+        },
+        {
+            "label": "2025-12-12_20-17-42",
+            "content": "@@ -1076,119 +1076,8 @@\n dm%0A%0A\n-akakamjajaka%0Aakiakaiakia%0Aakaoakoakoakoakoakoakoakoakoakoakakaoaoka%0A0aooakoakaokaooa%0Aamaomaoakoakoaoakoakoakaa%5D%0A\n %0Adef\n",
+            "lines": "71"
+        },
+        {
+            "label": "2025-12-12_20-26-45",
+            "content": "@@ -1,1119 +1,176 @@\n-class Animal:%0A    def __init__(self, nome: str):%0A        self.__nome: str = nome%0A%0A    def apresentarNome(self) -%3E str:%0A        return f%22Eu sou um(a) %7Bself.__nome%7D!%22%0A    %0A    def fazerSom(self):%0A        pass%0A%0A    def mover(self):%0A        pass%0A%0Aclass Leao(Animal):%0A    def __init__(self, nome: str):%0A        super().__init__(nome)%0A%0A    def fazerSom(self):%0A        return f%22Ruaaawww%22%0A    %0A    def mover(self):%0A        return f%22azunhada%22%0A    %0Aclass Elefante(Animal):%0A    def __init__(self, nome: str):%0A        super().__init__(nome)%0A%0A    def fazerSom(self):%0A        return f%22fummmm uuhhhh%22%0A    %0A    def mover(self):%0A        return f%22jogar %C3%A1gua%22%0A%0Aclass Cobra(Animal):%0A    def __init__(self, nome: str):%0A        super().__init__(nome)%0A%0A    def fazerSom(self):%0A        return f%22pssiiiiiiiiiiihhhhrhrhrhhr%22%0A    %0A    def mover(self):%0A        return f%22picada%22%0A%0A%0Adef main():%0A    animal = Animal()%0A%0A    while True:%0A        linha: str = input()%0A        print(%22$%22 + linha)%0A        args: list%5Bstr%5D = linha.split(%22 %22)%0A%0A        if args%5B0%5D == %22end%22:%0A            break%0A        elif args%5B0%5D == %22show%22:%0A            print(animal)%0A    %0Amain()\n+@@ -1072,16 +1072,127 @@%0A wdowdm%250A%250A%0A+akakamjajaka%250Aakiakaiakia%250Aakaoakoakoakoakoakoakoakoakoakoakakaoaoka%250A0aooakoakaokaooa%250Aamaomaoakoakoaoakoakoakaa%255D%250A%0A %250Adef mai%0A\n",
+            "lines": "4"
+        },
+        {
+            "label": "2025-12-12_20-27-06",
+            "content": "@@ -848,201 +848,8 @@\n a%22%0A%0A\n-aakakakaakaajkaaakaakaakaakakakakakaakaakaakajwdnwdhbqjwhdahwdhasbdjhhsa%0Awwwwwww  %0A   jnwdjwdjwd wqjqjwadwqwwwjwjwwjjjjajdj djd jwwjw jawwkjwjjwjjjjjjjjjjjjj%0Awkdiwdjwidmwkdm%0Aaqsjnqjunsjqnsjqns%0A\n %0Adef\n",
+            "lines": "58"
+        },
+        {
+            "label": "2025-12-12_20-46-10",
+            "content": "@@ -1,861 +1,117 @@\n-class Animal:%0A    def __init__(self, nome: str):%0A        self.__nome: str = nome%0A%0A    def apresentarNome(self) -%3E str:%0A        return f%22Eu sou um(a) %7Bself.__nome%7D!%22%0A    %0A    def fazerSom(self):%0A        pass%0A%0A    def mover(self):%0A        pass%0A%0Aclass Leao(Animal):%0A    def __init__(self, nome: str):%0A        super().__init__(nome)%0A%0A    def fazerSom(self):%0A        return f%22Ruaaawww%22%0A    %0A    def mover(self):%0A        return f%22azunhada%22%0A    %0Aclass Elefante(Animal):%0A    def __init__(self, nome: str):%0A        super().__init__(nome)%0A%0A    def fazerSom(self):%0A        return f%22fummmm uuhhhh%22%0A    %0A    def mover(self):%0A        return f%22jogar %C3%A1gua%22%0A%0Aclass Cobra(Animal):%0A    def __init__(self, nome: str):%0A        super().__init__(nome)%0A%0A    def fazerSom(self):%0A        return f%22pssiiiiiiiiiiihhhhrhrhrhhr%22%0A    %0A    def mover(self):%0A        return f%22picada%22%0A%0A\n+@@ -1040,274 +1040,8 @@%0A jqns%0A-%250Asqhsquhnqushuqhuqshs%250Aqsuhuqshsquqsjkbajujsahuhsujs%250Asiisjisjiksjisjs\n ijais\n-%0A\n+%250A\n asdh\n@@ -129,17 +129,19 @@\n isjdijsd\n-%0A\n+%250A\n sidjiakM\n@@ -156,17 +156,19 @@\n JSNUSHUD\n-%0A\n+%250A\n SIIDSJDI\n@@ -200,17 +200,19 @@\n jksanajn\n-%0A\n+%250A\n ajsajjsi\n@@ -230,17 +230,19 @@\n iasjkask\n-%0A\n+%250A\n sakanskj\n@@ -250,20 +250,26 @@\n asks\n-%0A\n+%250A\n end \n-%0A\n+%250A\n break\n-%0A\n+%250A\n dwpw\n@@ -273,17 +273,19 @@\n wpwdpldw\n-%0A\n+%250A\n         \n@@ -298,17 +298,19 @@\n  0 != 1:\n-%0A\n+%250A\n     retu\n@@ -321,272 +321,14 @@\n rue%0A\n-%0Adef main():%0A    animal = Animal()%0A%0A    while True:%0A        linha: str = input()%0A        print(%22$%22 + linha)%0A        args: list%5Bstr%5D = linha.split(%22 %22)%0A%0A        if args%5B0%5D == %22end%22:%0A            break%0A        elif args%5B0%5D == %22show%22:%0A            print(animal)%0A    %0Amain()\n+ %250A%250Ade%0A\n",
+            "lines": "4"
+        },
+        {
+            "label": "2025-12-12_20-48-08",
+            "content": "@@ -1008,149 +1008,8 @@\n ldw%0A\n-ajaisaksaksajs%0Aasijasijsiajsijaisjais%0Aasjqijiqjsiqjsijsisq%0Aqsijsqijsijsqijsqijsiqjiqq%0Aaskaakaakakaakaakaakakakakakakakakakakaka%0Aaaakiajaikak%0A\n     \n",
+            "lines": "69"
+        },
+        {
+            "label": "2025-12-12_20-57-51",
+            "content": "@@ -844,16 +844,357 @@\n icada%22%0A%0A\n+ijais%0Aasdhusdiksijijdisjdijsd%0AsidjiakMKIUHASDUJSNUSHUD%0ASIIDSJDIJD DeprecationWarningsjaijksanajn%0Aajsajjsiamsakasnisjiasjkask%0Asakanskjsasks%0Aend %0Abreak%0Adwpwdpldw%0Aajaisaksaksajs%0Aasijasijsiajsijaisjais%0Aasjqijiqjsiqjsijsisq%0Aqsijsqijsijsqijsqijsiqjiqq%0Aaskaakaakakaakaakaakakakakakakakakakakaka%0Aaaakiajaikak%0A            if 0 != 1:%0A    return True%0A%0A\n def main\n",
+            "lines": "75"
+        },
+        {
+            "label": "2025-12-12_20-58-16",
+            "content": "@@ -843,20 +843,16 @@\n picada%22%0A\n-    \n %0Adef mai\n",
+            "lines": "57"
+        },
+        {
+            "label": "2025-12-12_20-58-36",
+            "content": "@@ -852,402 +852,8 @@\n    %0A\n-    ajiqsjiqsiqjssqjisq%0A    sqijsqijsijsqijsqi%0A    sqijqsiqjssqjsq%0A    sqqsijsqijsqi%0A    sqiqsjiqsjisjq%0A    qisjiqsjisj%0A    qsijqsijsiqjisq%0A    qsijsqijsqisqjisq%0A    qsjisqjosqjisqjsqisq%0A    qsijsqijsqijsqijsq%0A    sqijsqisisjqijsqijsqijsijsqijsijqihsuqhsugqsygsqygysqgysqgysqygqsygsqygsqygsysygsyqgsqygsqygsygsqygqysgqsygsqysqygsyqgsysgyqgsyqgbsygqysgqy%0A    sqjsqjisqjjsqisq%0A    sqisiqjsi%0A    %0A\n def \n",
+            "lines": "57"
+        },
+        {
+            "label": "2025-12-12_21-35-20",
+            "content": "@@ -933,17 +933,319 @@\n sqijsqi%0A\n-%0A\n+    sqiqsjiqsjisjq%0A    qisjiqsjisj%0A    qsijqsijsiqjisq%0A    qsijsqijsqisqjisq%0A    qsjisqjosqjisqjsqisq%0A    qsijsqijsqijsqijsq%0A    sqijsqisisjqijsqijsqijsijsqijsijqihsuqhsugqsygsqygysqgysqgysqygqsygsqygsqygsysygsyqgsqygsqygsygsqygqysgqsygsqysqygsyqgsysgyqgsyqgbsygqysgqy%0A    sqjsqjisqjjsqisq%0A    sqisiqjsi\n %0A    %0Ade\n",
+            "lines": "71"
+        },
+        {
+            "label": "2025-12-12_21-35-28",
+            "content": "@@ -839,24 +839,116 @@\n n f%22picada%22%0A\n+    %0A    ajiqsjiqsiqjssqjisq%0A    sqijsqijsijsqijsqi%0A    sqijqsiqjssqjsq%0A    sqqsijsqijsqi%0A%0A%0A\n     %0Adef mai\n",
+            "lines": "64"
+        },
+        {
+            "label": "2025-12-12_22-38-43",
+            "content": "class Animal:\n    def __init__(self, nome: str):\n        self.__nome: str = nome\n\n    def apresentarNome(self) -> str:\n        return f\"Eu sou um(a) {self.__nome}!\"\n    \n    def fazerSom(self):\n        pass\n\n    def mover(self):\n        pass\n\nclass Leao(Animal):\n    def __init__(self, nome: str):\n        super().__init__(nome)\n\n    def fazerSom(self):\n        return f\"Ruaaawww\"\n    \n    def mover(self):\n        return f\"azunhada\"\n    \nclass Elefante(Animal):\n    def __init__(self, nome: str):\n        super().__init__(nome)\n\n    def fazerSom(self):\n        return f\"fummmm uuhhhh\"\n    \n    def mover(self):\n        return f\"jogar \u00e1gua\"\n\nclass Cobra(Animal):\n    def __init__(self, nome: str):\n        super().__init__(nome)\n\n    def fazerSom(self):\n        return f\"pssiiiiiiiiiiihhhhrhrhrhhr\"\n    \n    def mover(self):\n        return f\"picada\"\n    \ndef main():\n    animal = Animal()\n\n    while True:\n        linha: str = input()\n        print(\"$\" + linha)\n        args: list[str] = linha.split(\" \")\n\n        if args[0] == \"end\":\n            break\n        elif args[0] == \"show\":\n            print(animal)\n    \nmain()",
+            "lines": "57"
         }
     ]
 }

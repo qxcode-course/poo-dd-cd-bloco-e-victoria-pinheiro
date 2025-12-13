@@ -41,8 +41,6 @@ class Cobra(Animal):
     def mover(self):
         return f"picada"
     
-    
-
 def main():
     animal = Animal()
 
