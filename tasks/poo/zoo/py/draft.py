@@ -4,14 +4,14 @@ class Animal(ABC):  #a classe mãe agora é uma classe filha de ABC mas ainda é
     def __init__(self, nome: str):
         self.__nome: str = nome
 
-    def apresentarNome(self) -> str:
+    def apresentarNome(self) -> str:   #metodo concreto = função com codigo
         print(f"Eu sou um(a) {self.__nome}!")       #se esta retornando, precisa printar depois
     
     @abstractmethod #agora coloca isso acima das funções abstratas
     def fazerSom(self):
         pass
 
-    @abstractmethod
+    @abstractmethod  #metodo abstrato = função sem código
     def mover(self):
         pass
 
