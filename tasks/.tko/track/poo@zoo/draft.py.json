@@ -137,8 +137,53 @@
         },
         {
             "label": "2025-12-12_22-38-43",
-            "content": "class Animal:\n    def __init__(self, nome: str):\n        self.__nome: str = nome\n\n    def apresentarNome(self) -> str:\n        return f\"Eu sou um(a) {self.__nome}!\"\n    \n    def fazerSom(self):\n        pass\n\n    def mover(self):\n        pass\n\nclass Leao(Animal):\n    def __init__(self, nome: str):\n        super().__init__(nome)\n\n    def fazerSom(self):\n        return f\"Ruaaawww\"\n    \n    def mover(self):\n        return f\"azunhada\"\n    \nclass Elefante(Animal):\n    def __init__(self, nome: str):\n        super().__init__(nome)\n\n    def fazerSom(self):\n        return f\"fummmm uuhhhh\"\n    \n    def mover(self):\n        return f\"jogar \u00e1gua\"\n\nclass Cobra(Animal):\n    def __init__(self, nome: str):\n        super().__init__(nome)\n\n    def fazerSom(self):\n        return f\"pssiiiiiiiiiiihhhhrhrhrhhr\"\n    \n    def mover(self):\n        return f\"picada\"\n    \ndef main():\n    animal = Animal()\n\n    while True:\n        linha: str = input()\n        print(\"$\" + linha)\n        args: list[str] = linha.split(\" \")\n\n        if args[0] == \"end\":\n            break\n        elif args[0] == \"show\":\n            print(animal)\n    \nmain()",
+            "content": "@@ -1,143 +1,17 @@\n-from abc import ABC, abstractclassmethod%0A%0Aclass Animal(ABC):  #a classe m%C3%A3e agora %C3%A9 uma classe filha de ABC mas ainda %C3%A9 classe m%C3%A3e do resto\n+class Animal:\n %0A   \n@@ -167,81 +167,8 @@\n    %0A\n-    @abstractclassmethod #agora coloca isso acima das fun%C3%A7%C3%B5es abstratas%0A%0A\n     \n@@ -205,34 +205,8 @@\n ss%0A%0A\n-    @abstractclassmethod%0A%0A\n     \n@@ -851,19 +851,8 @@\n     \n-%0A%0A    %0A    \n %0Adef\n",
             "lines": "57"
+        },
+        {
+            "label": "2025-12-13_09-48-36",
+            "content": "@@ -1082,67 +1082,277 @@\n     \n-# %22animal = Animal()%22 -%3E N%C3%A3o se cria objeto da classe m%C3%A3e%0A    %0A\n+%0A    %0Adef main():%0A    animal = Animal()%0A%0A    while True:%0A        linha: str = input()%0A        print(%22$%22 + linha)%0A        args: list%5Bstr%5D = linha.split(%22 %22)%0A%0A        if args%5B0%5D == %22end%22:%0A            break%0A        elif args%5B0%5D == %22show%22:%0A            print(animal)%0A    %0Amain()\n",
+            "lines": "66"
+        },
+        {
+            "label": "2025-12-13_09-52-17",
+            "content": "@@ -14,32 +14,37 @@\n rt ABC, abstract\n+class\n method%0A%0Aclass An\n@@ -298,24 +298,29 @@\n    @abstract\n+class\n method #agor\n@@ -413,16 +413,21 @@\n abstract\n+class\n method%0A%0A\n",
+            "lines": "52"
+        },
+        {
+            "label": "2025-12-13_09-54-08",
+            "content": "@@ -32,33 +32,8 @@\n thod\n-  #usa para o %22contrato%22 \n %0A%0Acl\n@@ -351,16 +351,17 @@\n stratas%0A\n+%0A\n     def \n@@ -410,16 +410,17 @@\n tmethod%0A\n+%0A\n     def \n",
+            "lines": "52"
+        },
+        {
+            "label": "2025-12-13_09-57-43",
+            "content": "@@ -57,29 +57,8 @@\n to%22 \n-obriga certas coisas \n %0A%0Acl\n@@ -152,19 +152,16 @@\n do resto\n-   \n %0A    def\n@@ -1153,203 +1153,4 @@\n    %0A\n-    #fun%C3%A7%C3%A3o global: n%C3%A3o %C3%A9 relacionada a um objeto especifico e pode ser usada em qualquer momento%0A%0Adef apresentar(animal: Animal):%0A    animal.apresentarNome()%0A    animal.fazerSom()%0A    animal.mover()\n",
+            "lines": "50"
+        },
+        {
+            "label": "2025-12-13_10-06-00",
+            "content": "@@ -294,14 +294,15 @@\n     \n-print(\n+return \n f%22Eu\n@@ -331,59 +331,8 @@\n e%7D!%22\n-)       #se esta retornando, precisa printar depois\n %0A   \n",
+            "lines": "56"
+        },
+        {
+            "label": "2025-12-13_10-08-46",
+            "content": "@@ -1426,16 +1426,4 @@\n er()\n-%0A    print()\n",
+            "lines": "56"
+        },
+        {
+            "label": "2025-12-13_10-09-57",
+            "content": "@@ -1431,29 +1431,11 @@\n     \n-isinstance(animal, Cobra\n+print(\n )\n",
+            "lines": "57"
+        },
+        {
+            "label": "2025-12-13_10-16-23",
+            "content": "@@ -662,22 +662,23 @@\n         \n-print(\n+return \n f%22Ruaaaw\n@@ -680,17 +680,16 @@\n uaaawww%22\n-)\n %0A    %0A  \n@@ -715,22 +715,23 @@\n         \n-print(\n+return \n f%22azunha\n@@ -729,25 +729,24 @@\n  f%22azunhada%22\n-)\n %0A    %0Aclass \n@@ -862,22 +862,23 @@\n         \n-print(\n+return \n f%22fummmm\n@@ -885,17 +885,16 @@\n  uuhhhh%22\n-)\n %0A    %0A  \n@@ -920,22 +920,23 @@\n         \n-print(\n+return \n f%22jogar \n@@ -940,17 +940,16 @@\n ar %C3%A1gua%22\n-)\n %0A%0Aclass \n@@ -1066,18 +1066,20 @@\n     \n-print(\n+return \n f%22ps\n+s\n iiii\n@@ -1089,24 +1089,21 @@\n iiii\n-iiisii\n+hhh\n hrhrhrh\n-%22)%0A\n+hr%22\n %0A   \n@@ -1133,22 +1133,23 @@\n         \n-print(\n+return \n f%22picada\n@@ -1149,17 +1149,16 @@\n %22picada%22\n-)\n %0A    %0A%0A \n@@ -1427,22 +1427,16 @@\n r()%0A    \n-print(\n isinstan\n@@ -1456,227 +1456,4 @@\n bra)\n-)%0A%0Aanimal = Cobra(%22Jararaca%22)%0Aapresentar(animal)   #ja que apresentar %C3%A9 uma fun%C3%A7%C3%A3o global, n%C3%A3o chama ela a pertir de uma classe%0A    %0Abixo = %5BElefante(%22dumbo%22), Leao(%22simba%22), Cobra(%22coral%22)%5D%0Afor i in bixo:%0A    apresentar(i)\n",
+            "lines": "57"
+        },
+        {
+            "label": "2025-12-13_10-33-54",
+            "content": "from abc import ABC, abstractmethod  #usa para o \"contrato\" obriga certas coisas \n\nclass Animal(ABC):  #a classe m\u00e3e agora \u00e9 uma classe filha de ABC mas ainda \u00e9 classe m\u00e3e do resto   \n    def __init__(self, nome: str):\n        self.__nome: str = nome\n\n    def apresentarNome(self) -> str:\n        print(f\"Eu sou um(a) {self.__nome}!\")       #se esta retornando, precisa printar depois\n    \n    @abstractmethod #agora coloca isso acima das fun\u00e7\u00f5es abstratas\n    def fazerSom(self):\n        pass\n\n    @abstractmethod\n    def mover(self):\n        pass\n\nclass Leao(Animal):\n    def __init__(self, nome: str):\n        super().__init__(nome)\n\n    def fazerSom(self):\n        print(f\"Ruaaawww\")\n    \n    def mover(self):\n        print(f\"azunhada\")\n    \nclass Elefante(Animal):\n    def __init__(self, nome: str):\n        super().__init__(nome)\n\n    def fazerSom(self):\n        print(f\"fummmm uuhhhh\")\n    \n    def mover(self):\n        print(f\"jogar \u00e1gua\")\n\nclass Cobra(Animal):\n    def __init__(self, nome: str):\n        super().__init__(nome)\n\n    def fazerSom(self):\n        print(f\"psiiiiiiiiiiiiiisiihrhrhrh\")\n\n    \n    def mover(self):\n        print(f\"picada\")\n    \n\n    # \"animal = Animal()\" -> N\u00e3o se cria objeto da classe m\u00e3e\n    \n    #fun\u00e7\u00e3o global: n\u00e3o \u00e9 relacionada a um objeto especifico e pode ser usada em qualquer momento\n\ndef apresentar(animal: Animal):\n    animal.apresentarNome()\n    animal.fazerSom()\n    animal.mover()\n    print(isinstance(animal, Cobra))\n\nanimal = Cobra(\"Jararaca\")\napresentar(animal)   #ja que apresentar \u00e9 uma fun\u00e7\u00e3o global, n\u00e3o chama ela a pertir de uma classe\n    \nbixo = [Elefante(\"dumbo\"), Leao(\"simba\"), Cobra(\"coral\")]\nfor i in bixo:\n    apresentar(i)",
+            "lines": "65"
         }
     ]
 }

@@ -1,13 +1,17 @@
-class Animal:
+from abc import ABC, abstractmethod  #usa para o "contrato" obriga certas coisas 
+
+class Animal(ABC):  #a classe mãe agora é uma classe filha de ABC mas ainda é classe mãe do resto   
     def __init__(self, nome: str):
         self.__nome: str = nome
 
     def apresentarNome(self) -> str:
-        return f"Eu sou um(a) {self.__nome}!"
+        print(f"Eu sou um(a) {self.__nome}!")       #se esta retornando, precisa printar depois
     
+    @abstractmethod #agora coloca isso acima das funções abstratas
     def fazerSom(self):
         pass
 
+    @abstractmethod
     def mover(self):
         pass
 
@@ -16,42 +20,46 @@ class Leao(Animal):
         super().__init__(nome)
 
     def fazerSom(self):
-        return f"Ruaaawww"
+        print(f"Ruaaawww")
     
     def mover(self):
-        return f"azunhada"
+        print(f"azunhada")
     
 class Elefante(Animal):
     def __init__(self, nome: str):
         super().__init__(nome)
 
     def fazerSom(self):
-        return f"fummmm uuhhhh"
+        print(f"fummmm uuhhhh")
     
     def mover(self):
-        return f"jogar água"
+        print(f"jogar água")
 
 class Cobra(Animal):
     def __init__(self, nome: str):
         super().__init__(nome)
 
     def fazerSom(self):
-        return f"pssiiiiiiiiiiihhhhrhrhrhhr"
+        print(f"psiiiiiiiiiiiiiisiihrhrhrh")
+
     
     def mover(self):
-        return f"picada"
+        print(f"picada")
     
-def main():
-    animal = Animal()
 
-    while True:
-        linha: str = input()
-        print("$" + linha)
-        args: list[str] = linha.split(" ")
-
-        if args[0] == "end":
-            break
-        elif args[0] == "show":
-            print(animal)
+    # "animal = Animal()" -> Não se cria objeto da classe mãe
     
-main()
+    #função global: não é relacionada a um objeto especifico e pode ser usada em qualquer momento
+
+def apresentar(animal: Animal):
+    animal.apresentarNome()
+    animal.fazerSom()
+    animal.mover()
+    print(isinstance(animal, Cobra))
+
+animal = Cobra("Jararaca")
+apresentar(animal)   #ja que apresentar é uma função global, não chama ela a pertir de uma classe
+    
+bixo = [Elefante("dumbo"), Leao("simba"), Cobra("coral")]
+for i in bixo:
+    apresentar(i)

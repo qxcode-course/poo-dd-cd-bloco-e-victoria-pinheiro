@@ -1,3 +1,5 @@
+from abc import ABC, abstractmethod
+
 class Veiculo:  #classe modelo para as outras classes conseguirem usar ela como atributo
     def __init__(self, id: str, tipo: str):
         self.__id: str = id
@@ -16,6 +18,7 @@ class Veiculo:  #classe modelo para as outras classes conseguirem usar ela como 
     def getEntrada(self) -> int:
         return self._horaEntrada
     
+    @abstractmethod 
     def calcularValor(self, horaSaida: int) -> None:     #vai ser usado pelas classes filhas
         pass #dizendo para o código ignora essa parte (abstract)
 
