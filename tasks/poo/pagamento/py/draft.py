@@ -16,12 +16,12 @@ class Pagamento(ABC):
     def processar(self):
         pass
 
-class CartaoCredito:
-    def __init__(self, valor: float, descricao: str, numero: str, nomeTitular: str, limiteDisponivel: int):
+class CartaoCredito(Pagamento):
+    def __init__(self, valor: float, descricao: str, numero: str, nomeTitular: str, limiteDisponivel: float):
         super().__init__(valor, descricao)
         self.__numero: str = numero
         self.__nomeTitular: str = nomeTitular
-        self.__limiteDisponivel: int = limiteDisponivel
+        self.__limiteDisponivel: float = limiteDisponivel
 
     def processar(self):
         if self._valor > self.__limiteDisponivel:
@@ -30,7 +30,7 @@ class CartaoCredito:
             self.__limiteDisponivel -= self._valor
             print("pagamento confirmado") 
         
-class Pix:
+class Pix(Pagamento):
     def __init__(self, valor: float, descricao: str, chave: str, banco: str):
         super().__init__(valor, descricao)
         self.__chave: str = chave
@@ -40,4 +40,22 @@ class Pix:
         self.validarValor() 
         print(f"{self.__banco} {self.__chave}")
 
-    
+class Boleto(Pagamento):
+    def __init__(self, valor: float, descricao: str, codigoBarras:  str, vencimento: str):
+        super().__init__(valor, descricao)
+        self.__codigoBarras: str = codigoBarras
+        self.__vencimento: str = vencimento
+
+    def processar(self):
+        print(f"Boleto gerado. Aguardando pagamento...")
+
+def processar_pagamento(pagamento: Pagamento):
+    pagamento.validarValor()
+    pagamento.resumo()
+    pagamento.processar()
+    print(isinstance(pagamento, Pix))
+
+pagamentos = [Pix(150, "Camisa Esportiva", "email@uxui.com", "Banco Nubank"), CartaoCredito(120, "Show Marisa Monte", "1234 5678 9012 1314", "vic", 740)]
+for i in pagamentos:
+    i.resumo()
+
